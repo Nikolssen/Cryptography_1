@@ -72,7 +72,7 @@
                                 <rect key="frame" x="61" y="347" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="railwayHedgeRowsStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yny-oy-MzN"/>
+                                    <action selector="railwayFenceRowsStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mgT-aK-8W3"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NR8-HT-G7p">
@@ -182,10 +182,11 @@
                         <outlet property="PlayfairKeyField" destination="61D-ip-9oS" id="4WX-Zy-i3e"/>
                         <outlet property="PlayfairSubmittButton" destination="GnM-Bu-hcv" id="0x6-xe-2Vb"/>
                         <outlet property="PlayfairSwitch" destination="ggg-gO-ggS" id="umR-v3-0Jt"/>
-                        <outlet property="railwayHedgeField" destination="etm-J8-zhW" id="xhZ-D6-icM"/>
-                        <outlet property="railwayHedgeRowLabel" destination="NR8-HT-G7p" id="mG9-TJ-36p"/>
-                        <outlet property="railwayHedgeRowStepper" destination="Wp4-tu-CNv" id="TPv-V3-6rP"/>
-                        <outlet property="railwayHedgeSubmitButton" destination="hhS-tb-bmD" id="j3S-8J-QMy"/>
+                        <outlet property="railwayFenceField" destination="etm-J8-zhW" id="dUA-u2-fni"/>
+                        <outlet property="railwayFenceRowLabel" destination="NR8-HT-G7p" id="Z2b-OU-yfi"/>
+                        <outlet property="railwayFenceRowStepper" destination="Wp4-tu-CNv" id="jup-50-Iys"/>
+                        <outlet property="railwayFenceSubmitButton" destination="hhS-tb-bmD" id="INT-7U-vaf"/>
+                        <outlet property="railwayFenceSwitch" destination="ZIt-7j-0KD" id="VUg-gV-kJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIStepper *railwayFenceRowStepper;
 @property (weak, nonatomic) IBOutlet UILabel *railwayFenceRowLabel;
 @property (weak, nonatomic) IBOutlet UIButton *railwayFenceSubmitButton;
+@property (weak, nonatomic) IBOutlet UISwitch *railwayFenceSwitch;
 
 
 
@@ -55,7 +56,12 @@
 }
 - (IBAction)submitRailwayCypherization:(id)sender {
     RailwayFence* cryptographer = [[RailwayFence alloc] initWithNumberOfRows:(int) self.railwayFenceRowStepper.value];
-    [self.railwayFenceField setText: [cryptographer cypher:[self.railwayFenceField text]]];
+        NSString* myString = [NSString new];
+    if (self.railwayFenceSwitch.on)
+      myString=[cryptographer decypher:[self.railwayFenceField text]];
+    else
+       myString= [cryptographer cypher:[self.railwayFenceField  text]];
+    [self.railwayFenceField setText:myString];
 }
 
 @end
