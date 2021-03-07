@@ -34,7 +34,7 @@
     for (NSString* str in strings) 
         [result appendString:str];
     
-     return result;
+    return result;
 }
 
 
@@ -51,15 +51,15 @@
         length[row]+=1;
     }
     NSMutableArray<NSMutableString*>* strings = [NSMutableArray new];
-        for (int i = 0; i< self.rows; i++)
-            [strings addObject:[NSMutableString new]];
-        
-        unsigned int location = 0;
-        for (int i = 0; i<self.rows; i++){
-            [[strings objectAtIndex:i] appendString:[filteredCypher substringWithRange:NSMakeRange(location, length[i])]];
-            location+=length[i];
-        }
-        
+    for (int i = 0; i< self.rows; i++)
+        [strings addObject:[NSMutableString new]];
+    
+    unsigned int location = 0;
+    for (int i = 0; i<self.rows; i++){
+        [[strings objectAtIndex:i] appendString:[filteredCypher substringWithRange:NSMakeRange(location, length[i])]];
+        location+=length[i];
+    }
+    
     int i = 0; //index of cypher
     int j = 0; //index of substring
     BOOL isDescending = YES;
@@ -84,7 +84,7 @@
                 j+=2;
             }
         }
-    
+        
     }
     return result;
 }

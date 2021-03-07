@@ -15,6 +15,8 @@
 		84CC51C925F26720006435D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CC51C725F26720006435D2 /* LaunchScreen.storyboard */; };
 		84CC51CC25F26720006435D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC51CB25F26720006435D2 /* main.m */; };
 		84CC51D425F2674F006435D2 /* Playfair.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC51D325F2674F006435D2 /* Playfair.m */; };
+		84D570D425F4CB7B00D3D50B /* ColumnarTransposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D570D325F4CB7B00D3D50B /* ColumnarTransposition.m */; };
+		84D570D725F4E0CD00D3D50B /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D570D625F4E0CD00D3D50B /* NSString+RandomString.m */; };
 		84E55DD025F2C5670098EF03 /* RailwayFence.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E55DCF25F2C5670098EF03 /* RailwayFence.m */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,10 @@
 		84CC51CB25F26720006435D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84CC51D225F2674F006435D2 /* Playfair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Playfair.h; sourceTree = "<group>"; };
 		84CC51D325F2674F006435D2 /* Playfair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Playfair.m; sourceTree = "<group>"; };
+		84D570D225F4CB7B00D3D50B /* ColumnarTransposition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColumnarTransposition.h; sourceTree = "<group>"; };
+		84D570D325F4CB7B00D3D50B /* ColumnarTransposition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColumnarTransposition.m; sourceTree = "<group>"; };
+		84D570D525F4E0CD00D3D50B /* NSString+RandomString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
+		84D570D625F4E0CD00D3D50B /* NSString+RandomString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
 		84E55DCE25F2C5670098EF03 /* RailwayFence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RailwayFence.h; sourceTree = "<group>"; };
 		84E55DCF25F2C5670098EF03 /* RailwayFence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RailwayFence.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,19 +83,31 @@
 				84CC51C525F26720006435D2 /* Assets.xcassets */,
 				84CC51C725F26720006435D2 /* LaunchScreen.storyboard */,
 				84CC51CA25F26720006435D2 /* Info.plist */,
-				84E55DCD25F2C52B0098EF03 /* Cyphers */,
 				84CC51CB25F26720006435D2 /* main.m */,
+				84D570D825F4E0EC00D3D50B /* Category */,
+				84E55DCD25F2C52B0098EF03 /* Cyphers */,
 			);
 			path = Cryptography_1;
+			sourceTree = "<group>";
+		};
+		84D570D825F4E0EC00D3D50B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				84D570D525F4E0CD00D3D50B /* NSString+RandomString.h */,
+				84D570D625F4E0CD00D3D50B /* NSString+RandomString.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		84E55DCD25F2C52B0098EF03 /* Cyphers */ = {
 			isa = PBXGroup;
 			children = (
-				84CC51D325F2674F006435D2 /* Playfair.m */,
 				84CC51D225F2674F006435D2 /* Playfair.h */,
+				84CC51D325F2674F006435D2 /* Playfair.m */,
 				84E55DCE25F2C5670098EF03 /* RailwayFence.h */,
 				84E55DCF25F2C5670098EF03 /* RailwayFence.m */,
+				84D570D225F4CB7B00D3D50B /* ColumnarTransposition.h */,
+				84D570D325F4CB7B00D3D50B /* ColumnarTransposition.m */,
 			);
 			path = Cyphers;
 			sourceTree = "<group>";
@@ -167,7 +185,9 @@
 				84CC51C125F2671D006435D2 /* ViewController.m in Sources */,
 				84CC51BB25F2671D006435D2 /* AppDelegate.m in Sources */,
 				84CC51CC25F26720006435D2 /* main.m in Sources */,
+				84D570D425F4CB7B00D3D50B /* ColumnarTransposition.m in Sources */,
 				84CC51BE25F2671D006435D2 /* SceneDelegate.m in Sources */,
+				84D570D725F4E0CD00D3D50B /* NSString+RandomString.m in Sources */,
 				84CC51D425F2674F006435D2 /* Playfair.m in Sources */,
 				84E55DD025F2C5670098EF03 /* RailwayFence.m in Sources */,
 			);

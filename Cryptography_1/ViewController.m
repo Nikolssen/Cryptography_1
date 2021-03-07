@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Playfair.h"
 #import "RailwayFence.h"
+#import "ColumnarTransposition.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *PlayfairField;
@@ -22,6 +23,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *railwayFenceSubmitButton;
 @property (weak, nonatomic) IBOutlet UISwitch *railwayFenceSwitch;
 
+@property (weak, nonatomic) IBOutlet UITextView *columnarTranspositionField;
+@property (weak, nonatomic) IBOutlet UITextField *columnarTranspositionKeyField;
+@property (weak, nonatomic) IBOutlet UIButton *columnarTranspositionButton;
+@property (weak, nonatomic) IBOutlet UISwitch *columnarTranspositionSwitch;
 
 
 @end
@@ -32,8 +37,7 @@
     [super viewDidLoad];
     self.PlayfairSubmittButton.layer.cornerRadius = 5;
     self.railwayFenceSubmitButton.layer.cornerRadius = 5;
-    
-    
+    self.columnarTranspositionButton.layer.cornerRadius = 5;
     
 }
 - (IBAction)submitPlayfairCypherization:(id)sender {
@@ -44,24 +48,33 @@
     Playfair* cryptographer = [[Playfair alloc] initWithKey:[self.PlayfairKeyField text]];
     NSString* myString = [NSString new];
     if (self.PlayfairSwitch.on)
-      myString=[cryptographer decypher:[self.PlayfairField text]];
+        myString=[cryptographer decypher:[self.PlayfairField text]];
     else
-       myString= [cryptographer cypher:[self.PlayfairField text]];
+        myString= [cryptographer cypher:[self.PlayfairField text]];
     [self.PlayfairField setText:myString];
 }
 
 - (IBAction)railwayFenceRowsStepperValueChanged:(id)sender {
     [self.railwayFenceRowLabel setText: [NSString stringWithFormat:@"%d", (int) self.railwayFenceRowStepper.value]];
-     
+    
 }
 - (IBAction)submitRailwayCypherization:(id)sender {
     RailwayFence* cryptographer = [[RailwayFence alloc] initWithNumberOfRows:(int) self.railwayFenceRowStepper.value];
-        NSString* myString = [NSString new];
+    NSString* myString = [NSString new];
     if (self.railwayFenceSwitch.on)
-      myString=[cryptographer decypher:[self.railwayFenceField text]];
+        myString=[cryptographer decypher:[self.railwayFenceField text]];
     else
-       myString= [cryptographer cypher:[self.railwayFenceField  text]];
+        myString= [cryptographer cypher:[self.railwayFenceField  text]];
     [self.railwayFenceField setText:myString];
+}
+- (IBAction)submitColumnarTransposition:(id)sender {
+    ColumnarTransposition* cryptographer = [[ColumnarTransposition alloc] initWithKey:self.columnarTranspositionKeyField.text];
+    NSString* myString = [NSString new];
+        if (self.columnarTranspositionSwitch.on)
+        myString=[cryptographer decypher:[self.columnarTranspositionField text]];
+    else
+        myString= [cryptographer cypher:[self.columnarTranspositionField  text]];
+    [self.columnarTranspositionField setText:myString];
 }
 
 @end

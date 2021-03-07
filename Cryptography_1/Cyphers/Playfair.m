@@ -25,7 +25,7 @@
 }
 
 - (void) getMatrix{
-   
+    
     NSMutableString *table = [NSMutableString stringWithString:[self.key uppercaseString]];
     
     for (unsigned i = 0; i< [table length]; i++){
@@ -43,10 +43,10 @@
         }
     }];
     
-   
+    
     NSMutableArray* resultMatrix = [NSMutableArray new];
     for (int i = 0; i<5; i++){
-         NSMutableArray* resultArray = [NSMutableArray new];
+        NSMutableArray* resultArray = [NSMutableArray new];
         for (int j = 0; j<5; j++){
             [resultArray addObject: [NSString stringWithFormat:@"%c", [result characterAtIndex:(i*5+j)]]];
         }
@@ -69,10 +69,10 @@
                 char1.i = i;
                 char1.j = j;
             }
-        if ([string characterAtIndex:1] == [[[self.matrix objectAtIndex:i] objectAtIndex:j] characterAtIndex:0]){
-            char2.i = i;
-            char2.j = j;
-        }
+            if ([string characterAtIndex:1] == [[[self.matrix objectAtIndex:i] objectAtIndex:j] characterAtIndex:0]){
+                char2.i = i;
+                char2.j = j;
+            }
             
         }
     }
@@ -117,7 +117,7 @@
         [result appendString:[[self.matrix objectAtIndex:char2.i]objectAtIndex:char1.j]];
         return result;
     }
-  
+    
     
     
 }
@@ -126,7 +126,7 @@
     
     NSMutableString* result = [NSMutableString new];
     NSString *newMessage = [[[[message stringByReplacingOccurrencesOfString:@" " withString:@""] uppercaseString]stringByReplacingOccurrencesOfString:@"J" withString:@"I"] uppercaseString];
-
+    
     int i = 0;
     while(i< newMessage.length){
         if (i+1 == newMessage.length)
@@ -152,12 +152,12 @@
 - (NSString*) decypher:(NSString *)cypher{
     NSMutableString* result = [NSMutableString new];
     NSString *newMessage = [[[[cypher stringByReplacingOccurrencesOfString:@" " withString:@""] uppercaseString]stringByReplacingOccurrencesOfString:@"J" withString:@"I"] uppercaseString];
-
+    
     int i = 0;
     while(i< newMessage.length){
         
-            [result appendString:[self biCodeForCharacters:[newMessage substringWithRange:NSMakeRange(i, 2)] ToCypher:NO]];
-            i+=2;
+        [result appendString:[self biCodeForCharacters:[newMessage substringWithRange:NSMakeRange(i, 2)] ToCypher:NO]];
+        i+=2;
         
     }
     return [result stringByReplacingOccurrencesOfString:@"X" withString:@"(X)"];
