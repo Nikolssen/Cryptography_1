@@ -60,8 +60,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Railway Hedge Cypher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTh-TG-IyC">
-                                <rect key="frame" x="120.5" y="238" width="173" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rail Hedge Cypher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTh-TG-IyC">
+                                <rect key="frame" x="135.5" y="238" width="143" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,8 +130,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Column Cypher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBh-4e-Rcr">
-                                <rect key="frame" x="147.5" y="409" width="119" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Columnar Transposition Cypher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBh-4e-Rcr">
+                                <rect key="frame" x="86.5" y="409" width="241.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -153,7 +153,6 @@
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NR8-HT-G7p">
                                         <rect key="frame" x="122" y="0.0" width="10" height="31"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -175,14 +174,30 @@
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="csP-8x-EoA">
-                                <rect key="frame" x="61" y="600" width="291" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="csP-8x-EoA">
+                                <rect key="frame" x="61.5" y="600" width="291" height="83"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="RQb-lc-BeP"/>
+                                    <constraint firstAttribute="height" constant="83" id="YVz-ot-2ka"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8v-qd-a7X">
+                                <rect key="frame" x="179.5" y="691" width="55" height="30"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="HyF-rB-7kt"/>
+                                </constraints>
+                                <state key="normal" title="Process">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitGrilleCypherization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iII-iY-EXb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -190,6 +205,7 @@
                             <constraint firstItem="xTh-TG-IyC" firstAttribute="top" secondItem="cjd-Be-kbP" secondAttribute="bottom" constant="32" id="3bj-s1-kH7"/>
                             <constraint firstItem="4BR-6C-FYH" firstAttribute="top" secondItem="wYF-eQ-o91" secondAttribute="bottom" constant="8" id="67l-Ah-If5"/>
                             <constraint firstItem="4BR-6C-FYH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Qx-yO-rwA"/>
+                            <constraint firstItem="csP-8x-EoA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7Uw-Sj-YOS"/>
                             <constraint firstItem="QBh-4e-Rcr" firstAttribute="top" secondItem="eK2-Pe-E85" secondAttribute="bottom" constant="31" id="FQw-P0-5x0"/>
                             <constraint firstItem="wYF-eQ-o91" firstAttribute="top" secondItem="QBh-4e-Rcr" secondAttribute="bottom" constant="8" id="G8R-Wh-caf"/>
                             <constraint firstItem="cjd-Be-kbP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="GEA-Q8-Hpv"/>
@@ -202,7 +218,9 @@
                             <constraint firstItem="wYF-eQ-o91" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UTi-mz-xCm"/>
                             <constraint firstItem="etm-J8-zhW" firstAttribute="top" secondItem="xTh-TG-IyC" secondAttribute="bottom" constant="8.5" id="bZA-HU-U54"/>
                             <constraint firstItem="xcs-wf-7ky" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bmw-fm-Mb7"/>
+                            <constraint firstItem="C8v-qd-a7X" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cIZ-Hz-pGc"/>
                             <constraint firstItem="GFI-IQ-h9b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="eTf-mb-uGD"/>
+                            <constraint firstItem="C8v-qd-a7X" firstAttribute="top" secondItem="csP-8x-EoA" secondAttribute="bottom" constant="8" id="hjm-Ul-uC1"/>
                             <constraint firstItem="xcs-wf-7ky" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lRJ-x6-KrN"/>
                             <constraint firstItem="GFI-IQ-h9b" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p71-wP-B5A"/>
                             <constraint firstItem="cjd-Be-kbP" firstAttribute="top" secondItem="GFI-IQ-h9b" secondAttribute="bottom" constant="8" id="puA-66-dnc"/>
@@ -210,6 +228,7 @@
                             <constraint firstItem="xTh-TG-IyC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rZr-Dt-waO"/>
                             <constraint firstItem="eK2-Pe-E85" firstAttribute="top" secondItem="etm-J8-zhW" secondAttribute="bottom" constant="8" id="t14-SB-cl0"/>
                             <constraint firstItem="4BR-6C-FYH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61.5" id="uRt-Pr-bsb"/>
+                            <constraint firstItem="csP-8x-EoA" firstAttribute="top" secondItem="bUk-aG-6pc" secondAttribute="bottom" constant="8" id="ypc-Aj-8kH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -222,6 +241,8 @@
                         <outlet property="columnarTranspositionField" destination="wYF-eQ-o91" id="C2R-Wq-2Zi"/>
                         <outlet property="columnarTranspositionKeyField" destination="CVn-pg-mBj" id="GtI-1p-oYr"/>
                         <outlet property="columnarTranspositionSwitch" destination="ZAH-vJ-vAU" id="yoL-QO-jRf"/>
+                        <outlet property="grilleButton" destination="C8v-qd-a7X" id="jhP-Lj-nxM"/>
+                        <outlet property="grilleField" destination="csP-8x-EoA" id="HoQ-2E-wJz"/>
                         <outlet property="railwayFenceField" destination="etm-J8-zhW" id="dUA-u2-fni"/>
                         <outlet property="railwayFenceRowLabel" destination="NR8-HT-G7p" id="Z2b-OU-yfi"/>
                         <outlet property="railwayFenceRowStepper" destination="Wp4-tu-CNv" id="jup-50-Iys"/>

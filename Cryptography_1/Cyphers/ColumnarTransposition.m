@@ -51,7 +51,7 @@
     
     
     self.headerMatrix = matrix;
-    NSLog(@"%@", self.headerMatrix);
+
 }
 
 - (NSString*) cypher: (NSString*) message{

@@ -52,7 +52,6 @@
         }
         [resultMatrix addObject:resultArray];
     }
-    NSLog(@"%@", resultMatrix);
     self.matrix = resultMatrix;
 }
 

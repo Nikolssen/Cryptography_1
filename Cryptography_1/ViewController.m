@@ -10,6 +10,7 @@
 #import "Playfair.h"
 #import "RailwayFence.h"
 #import "ColumnarTransposition.h"
+#import "TurningGrille.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *PlayfairField;
@@ -28,6 +29,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *columnarTranspositionButton;
 @property (weak, nonatomic) IBOutlet UISwitch *columnarTranspositionSwitch;
 
+@property (weak, nonatomic) IBOutlet UIButton *grilleButton;
+@property (weak, nonatomic) IBOutlet UITextView *grilleField;
+
 
 @end
 
@@ -35,9 +39,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.PlayfairSubmittButton.layer.cornerRadius = 5;
-    self.railwayFenceSubmitButton.layer.cornerRadius = 5;
-    self.columnarTranspositionButton.layer.cornerRadius = 5;
+    self.PlayfairSubmittButton.layer.cornerRadius = 7;
+    self.railwayFenceSubmitButton.layer.cornerRadius = 7;
+    self.columnarTranspositionButton.layer.cornerRadius = 7;
+    self.grilleButton.layer.cornerRadius = 7;
     
 }
 - (IBAction)submitPlayfairCypherization:(id)sender {
@@ -75,6 +80,10 @@
     else
         myString= [cryptographer cypher:[self.columnarTranspositionField  text]];
     [self.columnarTranspositionField setText:myString];
+}
+- (IBAction)submitGrilleCypherization:(id)sender {
+    TurningGrille* cryptographer = [TurningGrille new];
+    [self.grilleField setText:[cryptographer cypher:self.grilleField.text]];
 }
 
 @end
