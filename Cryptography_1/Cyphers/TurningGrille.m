@@ -70,6 +70,7 @@
     
     int row;
     int column;
+    
     for(int i = 1; i<= submatrixSize*submatrixSize;){
         column = arc4random()% size;
         row = arc4random()% size;
@@ -121,7 +122,53 @@
         }
     }
 
-   // NSLog(@"%@", result);
+    NSMutableString *key = [NSMutableString new];
+    for (int i = 0; i<size; i++){
+        for (int j = 0; j<size; j++)
+        {
+            if ([matrix[i][j] intValue] == 0)
+                [key appendString:[NSString stringWithFormat:@"%d", [matrix[i][j] intValue]]];
+            else
+                [key appendString:@"*"];
+        }
+       if(i!=size-1)
+           [key appendString:@"\n"];
+        
+    }
+    
+    _key = key;
+    return result;
+}
+- (NSString*) decypher:(NSString *)cypher withKey:(NSString *)key{
+    NSString* filteredKey = [key stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+
+    NSMutableArray* matrix = [NSMutableArray new];
+    int size = (int) sqrt(filteredKey.length);
+    for (int i = 0; i< size; i++) {
+        NSMutableArray* line = [NSMutableArray new];
+        for (int j = 0; j< size; j++){
+            [line addObject:[NSString stringWithFormat:@"%C", [filteredKey characterAtIndex:(size*i+j)]]];
+        }
+        [matrix addObject:line];
+    }
+    
+    NSMutableArray* cypherMatrix = [NSMutableArray new];
+    for (int i = 0; i< size; i++) {
+        NSMutableArray* line = [NSMutableArray new];
+        for (int j = 0; j< size; j++){
+            [line addObject:[NSString stringWithFormat:@"%C", [cypher characterAtIndex:(size*i+j)]]];
+        }
+        [cypherMatrix addObject:line];
+    }
+    NSMutableString* result = [NSMutableString new];
+    for (int k = 0; k< 4; k++){
+        for (int i = 0; i < size; i++)
+            for (int j = 0; j< size; j++){
+                if ([matrix[i][j] isEqualToString:@"0"])
+                    [result appendString:cypherMatrix[i][j]];
+            }
+        cypherMatrix = [[NSArray matrixByRotatingClockwiseMatrix:cypherMatrix] mutableCopy];
+    }
     return result;
 }
 @end

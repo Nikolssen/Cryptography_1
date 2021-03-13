@@ -31,6 +31,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *grilleButton;
 @property (weak, nonatomic) IBOutlet UITextView *grilleField;
+@property (weak, nonatomic) IBOutlet UITextView *grilleKeyField;
+@property (weak, nonatomic) IBOutlet UISwitch *grilleSwitch;
 
 
 @end
@@ -83,7 +85,15 @@
 }
 - (IBAction)submitGrilleCypherization:(id)sender {
     TurningGrille* cryptographer = [TurningGrille new];
-    [self.grilleField setText:[cryptographer cypher:self.grilleField.text]];
+
+    
+    if (self.grilleSwitch.on)
+        [self.grilleField setText:[cryptographer decypher:self.grilleField.text withKey:self.grilleKeyField.text]];
+    else
+    {
+        [self.grilleField setText:[cryptographer cypher:self.grilleField.text]];
+        [self.grilleKeyField setText:cryptographer.key];
+    }
 }
 
 @end

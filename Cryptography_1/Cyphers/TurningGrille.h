@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TurningGrille : NSObject
 - (NSString*) cypher: (NSString*) message;
+- (NSString*) decypher: (NSString*) cypher withKey: (NSString*) key;
+@property (nonatomic, copy, readonly) NSString* key;
 @end
 
 NS_ASSUME_NONNULL_END

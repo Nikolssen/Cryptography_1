@@ -77,8 +77,15 @@
     }
     NSMutableString *result = [NSMutableString new];
     for (int i = 0; i<self.headerMatrix.count; i++){
-        [result appendString:[resultStrings objectAtIndex: [[self.headerMatrix objectAtIndex:i] intValue]]];
-        [result appendString:@" "];
+        for (int j = 0; j<self.headerMatrix.count; j++)
+        {
+            if (self.headerMatrix[j].intValue == i){
+                [result appendString:[resultStrings objectAtIndex: j]];
+                [result appendString:@" "];
+                continue;
+            }
+        }
+
     }
 
     return result;
